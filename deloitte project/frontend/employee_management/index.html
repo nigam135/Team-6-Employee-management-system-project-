@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee and Department Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #555;
+            margin-top: 20px;
+        }
+        #employeeList, #departmentList {
+            background: white;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 22px);
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #addResult, #addDepartmentResult {
+            margin-top: 10px;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee and Department Management</h1>
+
+    <h2>All Employees</h2>
+    <div id="employeeList"></div>
+    <button onclick="viewAllEmployees()">View All Employees</button>
+
+    <h2>Add Employee</h2>
+    <input type="text" id="addFirstName" placeholder="Enter Employee Name">
+    <input type="number" id="addSalary" placeholder="Enter Salary">
+    <button onclick="addEmployee()">Add Employee</button>
+    <div id="addResult"></div>
+
+    <h2>All Departments</h2>
+    <div id="departmentList"></div>
+    <button onclick="viewAllDepartments()">View All Departments</button>
+
+    <h2>Add Department</h2>
+    <input type="text" id="addDepartmentName" placeholder="Enter Department Name">
+    <input type="text" id="addDepartmentLocation" placeholder="Enter Department Location">
+    <button onclick="addDepartment()">Add Department</button>
+    <div id="addDepartmentResult"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
